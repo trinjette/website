@@ -13,42 +13,52 @@ $color-michael: #1f9fed;
     top: 10px;
 
     i {
-        margin: 3px;
+        margin: 4px;
+        font-size: 25px;
     }
 }
 
 /* Shapes */
 
 .shape {
-    position:fixed;
-    top: 0;
+    position: fixed;
+    transition: .3s;
+    z-index: -1;
+    pointer-events: none;
+    top:50%;
+    left:50%
 }
 
 .square {
-    border: 5px solid #f2f2f2;
+    border: 5px solid #000;
     height: 180px;
     width: 180px;
+    opacity: .05;
 }
 
 .circle {
+    opacity: .05;
     height: 180px;
     width: 180px;
     border-radius: 50%;
-    border: 5px solid #f2f2f2;
+    border: 5px solid #000;
 }
 
 .triangle-outer {
-    border-top: 180px #f2f2f2 solid;
+    opacity: .05;
+    border-top: 180px #000 solid;
     border-left: 100px transparent solid;
     border-right: 100px transparent solid;
+    z-index: -3;
 }
 
 .triangle-inner {
     border-top: 160px #fefefe solid;
     border-left: 90px transparent solid;
     border-right: 90px transparent solid;
-    left: 10px;
-    top: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
+    z-index: -2;
 }
 
 .rhombus {
@@ -57,7 +67,21 @@ $color-michael: #1f9fed;
 	-webkit-transform: skew(20deg);
 	   -moz-transform: skew(20deg);
 	     -o-transform: skew(20deg);
-    border: 5px solid #f2f2f2;
+    border: 5px solid #000;
+    opacity: .05;
+}
+
+/* Signature */
+
+.signature {
+    font-weight: normal;
+    margin-top: 10px;
+    font-size: 50px;
+    font-family: MrDafoe;
+    position: absolute;
+    right: 0;
+    color: #333;
+    margin-right: 10px;
 }
 
 /* Navigation Links */
@@ -86,16 +110,47 @@ $color-michael: #1f9fed;
 
 tr:nth-child(1) h2:hover {
     border-bottom: 3px solid $color-pam;
+
+    .square {
+        opacity: .4;
+        background-color: $color-pam;
+        border: 5px solid $color-pam;
+    }
 }
 
 tr:nth-child(2) h2:hover {
     border-bottom: 3px solid $color-jim;
+
+    .triangle-outer {
+        opacity: .4;
+        border-top: 180px $color-jim solid;
+        border-left: 100px transparent solid;
+        border-right: 100px transparent solid;
+    }
+
+    .triangle-inner {
+        border-top: 160px transparent solid;
+        border-left: 90px transparent solid;
+        border-right: 90px transparent solid;
+    }
 }
 
 tr:nth-child(3) h2:hover {
     border-bottom: 3px solid $color-dwight;
+
+    .circle {
+        opacity: .4;
+        background-color: $color-dwight;
+        border: 5px solid $color-dwight;
+    }
 }
 
 tr:nth-child(4) h2:hover {
     border-bottom: 3px solid $color-michael;
+
+    .rhombus {
+        opacity: .4;
+        background-color: $color-michael;
+        border: 5px solid $color-michael;
+    }
 }
