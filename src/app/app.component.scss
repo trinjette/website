@@ -1,0 +1,101 @@
+/* Colors */
+
+$color-pam: #00cc99;
+$color-jim: #f03c1c;
+$color-dwight: #bcf21a;
+$color-michael: #1f9fed;
+
+/* Upper right icons */
+
+.iconlink {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    i {
+        margin: 3px;
+    }
+}
+
+/* Shapes */
+
+.shape {
+    position:fixed;
+    top: 0;
+}
+
+.square {
+    border: 5px solid #f2f2f2;
+    height: 180px;
+    width: 180px;
+}
+
+.circle {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    border: 5px solid #f2f2f2;
+}
+
+.triangle-outer {
+    border-top: 180px #f2f2f2 solid;
+    border-left: 100px transparent solid;
+    border-right: 100px transparent solid;
+}
+
+.triangle-inner {
+    border-top: 160px #fefefe solid;
+    border-left: 90px transparent solid;
+    border-right: 90px transparent solid;
+    left: 10px;
+    top: 5px;
+}
+
+.rhombus {
+	width: 180px;
+	height: 180px;
+	-webkit-transform: skew(20deg);
+	   -moz-transform: skew(20deg);
+	     -o-transform: skew(20deg);
+    border: 5px solid #f2f2f2;
+}
+
+/* Navigation Links */
+
+.navlink {
+    height: 25%;
+    text-align: right;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+
+    h2 {
+        font-size: 28px;
+        font-weight: normal;
+        float: right;
+        transition: .3s;
+        border-bottom: 3px solid transparent;
+    }
+
+}
+
+.navlink h2:hover {
+    padding-right: 30px;
+    font-weight: bold;
+}
+
+tr:nth-child(1) h2:hover {
+    border-bottom: 3px solid $color-pam;
+}
+
+tr:nth-child(2) h2:hover {
+    border-bottom: 3px solid $color-jim;
+}
+
+tr:nth-child(3) h2:hover {
+    border-bottom: 3px solid $color-dwight;
+}
+
+tr:nth-child(4) h2:hover {
+    border-bottom: 3px solid $color-michael;
+}
